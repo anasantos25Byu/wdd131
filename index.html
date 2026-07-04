@@ -3,105 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WDD 131 – Fundamentos da Web Dinâmica - Ana Suely Côrtes</title>
-
-  <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica - Ana Suely Côrtes. Página inicial do curso com HTML, CSS, JavaScript, acessibilidade, boas práticas de desenvolvimento web e projeto final.">
+  <title>WDD 131 - Ana Suely Côrtes</title>
+  <meta name="description" content="Página inicial do curso WDD 131">
   <meta name="author" content="Ana Suely Côrtes">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-  <!-- CSS principal -->
   <link rel="stylesheet" href="estilos/base.css">
-
-  <!-- JavaScript para datas -->
   <script src="scripts/obterdatas.js" defer></script>
 </head>
+
 <body>
   <header>
-    <div class="header-content">
-      <!-- span exibido como bloco via CSS para facilitar centralização -->
-      <span class="logo-text"></span>
-      <h1>WDD 131 – Fundamentos da Web Dinâmica - Ana Suely Côrtes Santos</h1>
+    <h1>WDD 131: Fundamentos da Web Dinâmica - Ana Suely Côrtes Santos</h1>
 
-      <nav>
-        <ul class="menu">
-          <li><a href="https://www.linkedin.com/in/ana-suely-côrtes">LinkedIn</a></li>
-          <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-          <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/prov/3?lang=por&id=p5#p5">Escritura Favorita</a></li>
-          <li><a href="project/">Projeto Final</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <a href="https://www.linkedin.com/in/ana-suely-côrtes">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/prov/3?lang=por&id=p5#p5">Escritura</a>
+      <a href="project/">Projeto Final</a>
+    </nav>
   </header>
 
   <main>
-  <!-- Card 1 -->
-  <section class="card">
-    <h2>Sobre Mim</h2>
-    <div class="card-content">
-      <figure>
-        <img src="imagens/perfil.jpg"
-             alt="Foto de perfil de Ana Suely"
-             width="300"
-             height="300"
-             loading="lazy">
-        <figcaption>Ana Suely</figcaption>
-      </figure>
-      <p>
-        Meu nome é Ana Suely Côrtes. Estudo e pratico desenvolvimento web com
-            foco em sites dinâmicos e acessíveis. Este curso
-            <strong>WDD 131 – Fundamentos da Web Dinâmica</strong> trabalha HTML
-            semântico, CSS responsivo, JavaScript e boas práticas.
-      </p>
-    </div>
-  </section>
+    <h2>Ana Suely Côrtes Santos</h2>
 
-  <!-- Card 2 -->
-  <section class="card">
-    <h2>Brasil</h2>
-    <div class="card-content">
-      <figure>
-        <img src="imagens/bandeira.jpg"
-             alt="Bandeira do Brasil"
-             width="300"
-             height="200"
-             loading="lazy">
-        <figcaption>Brasil</figcaption>
-      </figure>
-      <p>
-        Moro no Brasil e gosto de criar experiências web claras, rápidas e inclusivas,
-        aplicando princípios de design, acessibilidade e desempenho.            <strong>WDD 131 – Fundamentos da Web Dinâmica</strong> trabalha HTML
-            
-      </p>
+    <div class="cards-grid">
+      <section class="card card-sobre">
+        <h3>Sobre Mim</h3>
+
+        <div class="sobre-conteudo">
+          <p>
+            Meu nome é Ana Suely Côrtes. Estudo desenvolvimento web com foco em
+            sites dinâmicos, responsivos e acessíveis. Este curso WDD 131 trabalha
+            HTML semântico, CSS, JavaScript e boas práticas de desenvolvimento web.
+          </p>
+
+          <img src="imagens/perfil.jpg" alt="Foto de perfil de Ana Suely">
+        </div>
+
+        <h4>Brasil</h4>
+
+        <div class="pais">
+          <figure>
+            <img src="imagens/bandeira.jpg" alt="Bandeira do Brasil">
+            <figcaption>Bandeira Oficial do Brasil</figcaption>
+          </figure>
+
+          <p>
+            Moro no Brasil, um país conhecido por sua diversidade cultural,
+            belezas naturais, criatividade e alegria. Gosto de aprender coisas
+            novas e criar experiências web claras e inclusivas.
+          </p>
+        </div>
+      </section>
+
+      <section class="card card-recursos">
+        <h3>Recursos Web Dev</h3>
+
+        <ul>
+          <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank">MDN Web Docs</a></li>
+          <li><a href="https://web.dev/" target="_blank">web.dev</a></li>
+          <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+          <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+        </ul>
+      </section>
     </div>
-  </section>
-   <!-- Card DIREITO: Recursos Web Dev -->
-    <section class="card card-recursos">
-      <h2>Recursos Web Dev</h2>
-      <ul class="lista-recursos">
-        <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noreferrer">MDN Web Docs</a></li>
-        <li><a href="https://web.dev/" target="_blank" rel="noreferrer">web.dev (Google)</a></li>
-        <li><a href="https://css-tricks.com/" target="_blank" rel="noreferrer">CSS-Tricks</a></li>
-        <li><a href="https://javascript.info/" target="_blank" rel="noreferrer">javascript.info</a></li>
-      </ul>
-</main>
+  </main>
 
   <footer>
-    <p>
-      &copy; <span id="anoatual"></span> | Ana Suely Côrtes | Brasil
-    </p>
+    <p>&copy;<span id="anoatual"></span> 🌺 Ana Suely Côrtes Santos 🌺 Brasil</p>
     <p id="ultimaModificacao"></p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
