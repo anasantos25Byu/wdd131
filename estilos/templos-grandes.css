@@ -1,0 +1,77 @@
+/* ===================================
+   TELAS MAIORES
+=================================== */
+
+@media screen and (min-width: 700px) {
+
+    /* Cabeçalho */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .cabecalho {
+        min-height: 84px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .titulo-site {
+        font-size: 1.8rem;
+    }
+
+    /* Esconde o botão de hambúrguer */
+
+    #menu {
+        display: none;
+    }
+
+    /* Navegação horizontal */
+
+    nav,
+    nav.aberto {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        background-color: transparent;
+    }
+
+    nav a {
+        padding: 2rem 1rem;
+        border: none;
+    }
+
+    /* Conteúdo */
+
+    main {
+        padding: 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    /* Galeria com duas colunas */
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* ===================================
+   TELAS GRANDES
+=================================== */
+
+@media screen and (min-width: 1000px) {
+
+    /* Galeria com três colunas */
+
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

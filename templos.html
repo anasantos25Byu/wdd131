@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Álbum responsivo com fotografias de templos de A Igreja de Jesus Cristo dos Santos dos Últimos Dias.">
+
+    <meta name="author" content="Ana Suely Côrtes Santos">
+
+    <title>Álbum do Templo | Ana Suely Côrtes Santos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS mobile first -->
+    <link rel="stylesheet" href="estilos/templos.css">
+
+    <!-- CSS para telas maiores -->
+    <link rel="stylesheet" href="estilos/templos-grandes.css">
+
+    <!-- JavaScript externo -->
+    <script src="scripts/templos.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <p class="titulo-site">Álbum do Templo</p>
+
+            <button id="menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+
+        <nav id="navegacao">
+            <a href="index.html">Página Inicial</a>
+            <a href="#" id="antigo">Antigo</a>
+            <a href="#" id="novo">Novo</a>
+            <a href="#" id="grande">Grande</a>
+            <a href="#" id="pequeno">Pequeno</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Templos</h1>
+
+        <section class="galeria" aria-label="Galeria de templos">
+
+            <figure>
+                <img src="imagens/templo-de-salt-lake.jpg"
+                    alt="Templo de Salt Lake, Utah"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Salt Lake</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-roma.jpg   "
+                    alt="Templo de Roma, Itália"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Roma</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-brasilia.jpg"
+                    alt="Templo de Brasília, Brasil"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Brasília</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-sao-paulo.jpg"
+                    alt="Templo de São Paulo, Brasil"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de São Paulo</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-lisboa.jpg"
+                    alt="Templo de Lisboa, Portugal"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Lisboa</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-de-washgton.jpg"
+                    alt="Templo de Washington D.C., Estados Unidos"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Washington D.C.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-de-paris.jpg"
+                    alt="Templo de Paris, França"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Paris</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-de-curitiba.jpg"
+                    alt="Templo de Curitiba, Brasil"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Curitiba</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagens/templo-de-recife.jpg"
+                    alt="Templo de Recife, Brasil"
+                    width="400"
+                    height="250"
+                    loading="lazy">
+
+                <figcaption>Templo de Recife</figcaption>
+            </figure>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="ano-atual"></span> |
+            Ana Suely Côrtes Santos |
+            Brasil
+        </p>
+
+        <p id="ultima-modificacao"></p>
+    </footer>
+
+</body>
+
+</html>

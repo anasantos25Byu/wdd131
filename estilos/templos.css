@@ -1,0 +1,203 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+:root {
+    --cor-primaria: #12355b;
+    --cor-secundaria: #1f6f8b;
+    --cor-destaque: #f4b942;
+    --cor-fundo: #f5f7fa;
+    --cor-card: #ffffff;
+    --cor-texto: #1f2933;
+    --cor-clara: #ffffff;
+    --cor-rodape: #0c243d;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+/* ==============================
+   CABEÇALHO
+================================ */
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.titulo-site {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* ==============================
+   BOTÃO HAMBÚRGUER
+================================ */
+
+#menu {
+    width: 48px;
+    height: 48px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 1.8rem;
+    color: var(--cor-clara);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#menu:hover,
+#menu:focus {
+    color: var(--cor-primaria);
+    background-color: var(--cor-destaque);
+}
+
+#menu:focus-visible {
+    outline: 3px solid var(--cor-clara);
+    outline-offset: 3px;
+}
+
+/* ==============================
+   NAVEGAÇÃO MOBILE
+================================ */
+
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--cor-secundaria);
+}
+
+nav.aberto {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--cor-clara);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--cor-primaria);
+    background-color: var(--cor-destaque);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--cor-clara);
+    outline-offset: -5px;
+}
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+================================ */
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+/* ==============================
+   GALERIA MOBILE
+================================ */
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--cor-card);
+    box-shadow: var(--sombra);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+figure:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.85);
+}
+
+figcaption {
+    padding: 1rem;
+    border-top: 4px solid var(--cor-destaque);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+/* ==============================
+   RODAPÉ
+================================ */
+
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    color: var(--cor-clara);
+    background-color: var(--cor-rodape);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.4rem 0;
+    line-height: 1.5;
+}
+
+#ultima-modificacao {
+    color: var(--cor-destaque);
+    font-size: 0.9rem;
+}
