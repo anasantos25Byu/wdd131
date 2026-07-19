@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris - França</title>
+    <meta name="description" content="Descubra a cidade da luz, Paris, na França.">
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/local.css" />
+    <!-- JS -->
+    <script src="scripts/local.js" defer></script>
+    
+</head>
+<body>
+    <header class="site-header">
+      <div class="brand">
+        <h1>Paris, França</h1>  
+        <p class="tagline">A cidade da luz e do amor</p>
+      </div>
+      <!-- Imagem principal responsiva (WebP + srcset) -->
+      <figure class="hero">
+        <picture>
+          <!-- telas grandes -->
+          <source
+            type="imagens/webp"
+            srcset="imagens/torre_1000.webp 1000w, imagens/torre_800.webp 800w, imagens/torre_800.webp 800w, imagens/torre_400.webp 400w"
+            sizes="(min-width: 900px) 1200px, 100vw" />
+          <!-- telas médias/pequenas -->
+          <img
+            src="imagens/torre_800.webp"
+            srcset="imagens/torre_400.webp 400w, imagens/torre_800.webp 800w, imagens/torre_1000.webp 800w"
+            sizes="(max-width: 599px) 100vw, (max-width: 899px) 90vw, 800px"
+            width="800"
+            height="400"
+            alt="Torre Eiffel - Paris, França" />
+        </picture>
+        <figcaption>Torre Eiffel - Paris, França</figcaption>
+      </figure>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#clima">Clima</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="site-main">
+      <section id="sobre" class="card sobre">
+        <h2>Sobre</h2>
+        <p>
+          Paris é a capital da França e uma das cidades mais visitadas do mundo. Conhecida como "cidade da luz", é famosa por sua arquitetura histórica, 
+          museus renomados e cultura vibrante.
+        </p>
+      </section>
+      <section id="clima" class="card clima" aria-labelledby="titulo-clima">
+        <div class="clima-header">
+          <h2 id="titulo-clima">Clima</h2>
+          <!-- Ícone SVG exibido em telas móveis; oculto em telas amplas via CSS -->
+          <img class="icone-clima-svg" src="imagens/partly-cloudy.svg" alt="" aria-hidden="true" />
+        </div>
+        <div class="clima-grid" role="group" aria-label="Condições do clima">
+          <div class="metric">
+            <span class="label">Temperatura</span>
+            <span class="value"><span id="temp-valor">28</span> °C</span>
+          </div>
+          <div class="metric">
+            <span class="label">Vento</span>  
+            <span class="value"><span id="vento-valor">12</span> km/h</span>
+          </div>
+          <div class="metric">
+            <span class="label">Umidade</span>
+            <span class="value">70%</span>
+          </div>
+          <div class="metric destaque">
+            <span class="label">Sensação térmica</span>
+            <span class="value" id="sensacao-valor">N/A</span>
+          </div>
+          <p class="nota">Dados estáticos de exemplo para fins de layout.</p>
+        </div>
+      </section>
+      <section id="galeria" class="card galeria">
+        <h2>Galeria</h2>
+        <ul class="grid-galeria">
+          <li>
+            <figure>
+              <img src="imagens/torre_400.webp" width="200" height="260" alt="Torre Eiffel" />
+              <figcaption>Torre Eiffel</figcaption>
+            </figure>
+          </li>
+             <li>
+            <figure>
+               <img src="imagens/museu_louvre.webp" width="200" height="260" alt="" />
+              <figcaption>Museu de Louvre</figcaption>
+              
+            </figure>
+          </li>
+          <li>
+            <figure>
+                <img src="imagens/disneyland_paris.webp" width="200" height="260" alt="Disneyland Paris" />
+                <figcaption>Disneyland Parque de diversões de Paris</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="imagens/restaurante_paris.webp" width="200" height="260" alt="Comida típica de Paris" />
+              <figcaption>Restaurante típico de Paris</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+               <img src="imagens/arco_triunfo.webp" width="200" height="260" alt="" />
+              <figcaption>Museu Arco do Triunfo</figcaption>
+              
+            </figure>
+          </li>
+  
+        </ul>
+      </section>
+      <aside class="card dicas" aria-labelledby="titulo-dicas">
+        <h2 id="titulo-dicas">Dicas rápidas</h2>
+        <ul>
+          <li>Melhor época: A melhor época para visitar Paris é durante a 🌷 Primavera (abril a junho) — o clima é agradável e os jardins estão em plena floração.</li>
+          <li>Roupas leves e confortáveis..</li>
+          <li>Experimente o croissant, macarron e outros pratos típicos em Paris.</li>
+        </ul>
+      </aside>
+    </main>
+    <footer class="site-footer" id="contato">
+      <p><strong>Contato:</strong> turismo@exemplo.com · @visiteParis</p>
+      <p>
+        <span id="ano-atual"></span> — Última modificação: <span id="ultima-modificacao"></span>
+      </p>
+      <p class="creditos-imagens">
+        Imagens ilustrativas via Pexels/Unsplash.
+      </p>
+    </footer>
+  </body>
+</html>
+</body>
+</html>

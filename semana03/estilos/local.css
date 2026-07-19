@@ -1,0 +1,228 @@
+:root {
+  --cor-fundo: #f7fafc;
+  --cor-superficie: #ffffff;
+  --cor-primaria: #006c5f;   /* inspire-se nas cores locais/da bandeira escolhida */
+  --cor-secundaria: #f0b429;
+  --cor-texto: #1f2937;
+  --cor-texto-suave: #4b5563;
+  --borda-suave: #e5e7eb;
+  --raio: 14px;
+  --sombra: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+.site-header {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(0deg, var(--cor-fundo), #eef6f5);
+  border-bottom: 1px solid var(--borda-suave);
+}
+
+.brand h1 {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.brand .tagline {
+  margin: 0.25rem 0 0;
+  color: var(--cor-texto-suave);
+}
+
+.hero {
+  margin: 0;
+  border-radius: var(--raio);
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--sombra);
+}
+.hero img { display: block; width: 100%; height: auto; }
+.hero figcaption {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+  background: var(--cor-superficie);
+  border-top: 1px solid var(--borda-suave);
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background: #e6f3f1;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.site-nav a:hover,
+.site-nav a:focus {
+  background: var(--cor-primaria);
+  color: #fff;
+}
+
+.site-main {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--cor-superficie);
+  border: 1px solid var(--borda-suave);
+  border-radius: var(--raio);
+  padding: 1rem;
+  box-shadow: var(--sombra);
+}
+
+.clima-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icone-clima-svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Grade simples para as métricas de clima */
+.clima-grid {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.metric {
+  border: 1px dashed var(--borda-suave);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #fbfbfd;
+}
+.metric .label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+.metric .value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.metric.destaque {
+  background: #fff9ed;
+  border-color: #ffe0a3;
+}
+
+.clima .nota {
+  grid-column: 1 / -1;
+  margin: 0.25rem 0 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.875rem;
+}
+
+/* Galeria */
+.grid-galeria {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-galeria figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--borda-suave);
+  background: #fff;
+}
+.grid-galeria img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.grid-galeria figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+  background: #fafafa;
+  border-top: 1px solid var(--borda-suave);
+}
+
+.site-footer {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--cor-texto-suave);
+  border-top: 1px solid var(--borda-suave);
+  background: #f4f7f7;
+}
+.creditos-imagens {
+  font-size: 0.85rem;
+}
+
+/* Pseudoelemento com emoticon na visualização ampla:
+   Após o título "Clima", mostrar ⛅ e ocultar o SVG. */
+@media (min-width: 900px) {
+  .site-header {
+    grid-template-columns: 1fr;
+  }
+
+  .site-main {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "sobre dicas"
+      "clima dicas"
+      "galeria galeria";
+  }
+
+  .sobre { grid-area: sobre; }
+  .clima { grid-area: clima; }
+  .galeria { grid-area: galeria; }
+  .dicas { grid-area: dicas; }
+
+  /* Ícone via pseudoelemento depois do h2 "Clima" */
+  #titulo-clima::after {
+    content: " ⛅";
+    font-size: 1.1em;
+  }
+  /* Oculta o SVG no desktop/amplo */
+  .icone-clima-svg {
+    display: none;
+  }
+
+  .clima-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
