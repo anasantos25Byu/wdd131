@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Álbum responsivo com fotografias de templos de A Igreja de Jesus Cristo dos Santos dos Últimos Dias.">
+
+    <meta name="author" content="Ana Suely Côrtes Santos">
+
+    <title>Álbum do Templo | Ana Suely Côrtes Santos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-filtrados-large.css">
+    
+    <!-- JavaScript -->
+    <script src="scripts/templos-filtrados.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <h1 class="titulo-site">Álbum do Templo</h1>
+
+            <button id="menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+        <!-- Navegação do site -->
+        <nav id="navegacao" aria-label="Menu principal">
+            <a href="#" id="paginainicial">Página Inicial</a>
+            <a href="#" id="antigo">Antigo</a>
+            <a href="#" id="novo">Novo</a>
+            <a href="#" id="grande">Grande</a>
+            <a href="#" id="pequeno">Pequeno</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="page-title">Página Inicial</h2>
+        <!-- Os cartões dos templos serão criados pelo JavaScript -->
+        <section class="gallery"></section>
+
+    </main>
+
+   <footer>
+
+<p>&copy; <span id="ano-atual"></span>Ana Suely Côrtes Santos | Brasil</p>
+
+<p>Última modificação:<span id="lastModified"></span></p>
+
+</footer>
+
+
+</body>
+
+</html>
+
