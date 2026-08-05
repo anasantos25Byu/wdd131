@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de Avaliação de Produto">
+    <meta name="author" content="Ana Suely Côrtes Santos">
+
+    <title>Formulário de Avaliação</title>
+
+    <link rel="stylesheet" href="estilos/formulario.css">
+
+    <script src="scripts/formulario.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Avaliação de Produto</h1>
+</header>
+
+<main>
+
+<form method="get" action="avaliacao.html">
+
+<div class="campo">
+
+<label for="produto">Nome do Produto *</label>
+
+<select id="produto" name="produto" required>
+
+<option value="" selected disabled>Selecione um Produto...</option>
+
+</select>
+
+</div>
+
+<div class="campo">
+
+<p>Classificação Geral *</p>
+
+<div class="estrelas">
+
+<label><input type="radio" name="classificacao" value="1" required>☆</label>
+
+<label><input type="radio" name="classificacao" value="2">☆☆</label>
+
+<label><input type="radio" name="classificacao" value="3">☆☆☆</label>
+
+<label><input type="radio" name="classificacao" value="4">☆☆☆☆</label>
+
+<label><input type="radio" name="classificacao" value="5">☆☆☆☆☆</label>
+
+</div>
+
+</div>
+
+<div class="campo">
+
+<label for="data">Data de Instalação *</label>
+
+<input
+type="date"
+id="data"
+name="data"
+required>
+
+</div>
+
+<div class="campo">
+
+<p>Recursos úteis</p>
+
+<label><input type="checkbox" id="durabilidade" name="recursos" value="Durabilidade"> Durabilidade</label>
+
+<label><input type="checkbox" id="desempenho" name="recursos" value="Desempenho"> Desempenho</label>
+
+<label><input type="checkbox" id="design" name="recursos" value="Design"> Design</label>
+
+<label><input type="checkbox" id="facilidade" name="recursos" value="Facilidade de Uso"> Facilidade de Uso</label>
+
+</div>
+
+<div class="campo">
+
+<label for="avaliacao">Avaliação Escrita</label>
+
+<textarea
+id="avaliacao"
+name="avaliacao"
+rows="5"></textarea>
+
+</div>
+
+<div class="campo">
+
+<label for="usuario">Nome de Usuário</label>
+
+<input
+type="text"
+id="usuario"
+name="usuario">
+
+</div>
+
+<input
+type="submit"
+value="Enviar Avaliação"
+class="botao">
+
+</form>
+
+</main>
+
+<footer>
+
+<p>
+
+© <span id="ano"></span> | Ana Suely Côrtes Santos | Brasil
+
+</p>
+
+<p id="ultimaModificacao"></p>
+
+</footer>
+
+</body>
+</html>
