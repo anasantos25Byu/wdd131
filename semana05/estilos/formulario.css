@@ -1,7 +1,8 @@
 :root{
 
 --cor1:#004b87;
---cor2:#f7f7f7;
+--cor2:#f5f7fa;
+
 --cor3:#ffffff;
 --cor4:#ffd700;
 
@@ -53,7 +54,7 @@ box-shadow:0 5px 15px rgba(0,0,0,.2);
 
 .campo{
 
-margin-bottom:20px;
+margin-bottom:30px;
 
 display:flex;
 
