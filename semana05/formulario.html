@@ -26,32 +26,60 @@
 <div class="campo">
     <label for="produto">Nome do produto *</label>
     <select id="produto" name="produto" required> 
-        <option value="" disabled selected>Selecione um produto...</option>
+        <option value="" disabled selected hidden>Selecione um produto</option>
     </select>
-
-
-
-
 </div>
 
 <div class="campo">
 
 <p>Classificação Geral *</p>
 
-<div class="estrelas">
+<label for="estrela1">
+    <input type="radio"
+           id="estrela1"
+           name="classificacao"
+           value="1"
+           required>
+    ★☆☆☆☆
+</label>
 
-<label><input type="radio" name="classificacao" value="1" required>☆</label>
+<label for="estrela2">
+    <input type="radio"
+           id="estrela2"
+           name="classificacao"
+           value="2"
+           required>
+    ★★☆☆☆
+</label>
 
-<label><input type="radio" name="classificacao" value="2">☆☆</label>
+<label for="estrela3">
+    <input type="radio"
+           id="estrela3"
+           name="classificacao"
+           value="3"
+           required>
+    ★★★☆☆
+</label>
 
-<label><input type="radio" name="classificacao" value="3">☆☆☆</label>
+<label for="estrela4">
+    <input type="radio"
+           id="estrela4"
+           name="classificacao"
+           value="4"
+           required>
+    ★★★★☆
+</label>
 
-<label><input type="radio" name="classificacao" value="4">☆☆☆☆</label>
-
-<label><input type="radio" name="classificacao" value="5">☆☆☆☆☆</label>
+<label for="estrela5">
+    <input type="radio"
+           id="estrela5"
+           name="classificacao"
+           value="5"
+           required>
+    ★★★★★
+</label>
 
 </div>
-
 </div>
 
 <div class="campo">
