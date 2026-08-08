@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre categorias de serviços e envie uma solicitação para a AloCare.">
+    <meta name="author" content="Ana Suely Côrtes Santos">
+    <title>Serviços | AloCare</title>
+    <link rel="icon" href="imagens/alocare-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="estilos/alocare.css">
+    <script src="scripts/alocare.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="index.html" aria-label="AloCare - página inicial">
+                <img src="imagens/alocare-mark.svg" alt="" width="44" height="44">
+                <span><strong>Alo</strong>Care<small>Locação de mão de obra</small></span>
+            </a>
+            <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+            <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a class="active" href="servicos.html">Serviços</a>
+                <a href="profissionais.html">Profissionais</a>
+                <a href="referencias.html">Referências</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Encontre o que precisa</p>
+                <h1>Categorias de serviços</h1>
+                <p>Escolha uma categoria para conhecer os tipos de apoio disponíveis e iniciar sua solicitação.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="filter-bar">
+                    <label for="service-search">Pesquisar serviço
+                        <input id="service-search" type="search" placeholder="Ex.: limpeza, administrativo..." autocomplete="off">
+                    </label>
+                    <label for="service-category">Categoria
+                        <select id="service-category">
+                            <option value="todos">Todas</option>
+                            <option value="administrativo">Administrativo</option>
+                            <option value="manutencao">Manutenção</option>
+                            <option value="eventos">Eventos</option>
+                            <option value="limpeza">Limpeza</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div id="service-list" class="service-grid" aria-live="polite"></div>
+                <p id="service-empty" class="empty-message" hidden>Nenhum serviço corresponde à busca. Tente outra categoria ou palavra-chave.</p>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container form-layout">
+                <div>
+                    <p class="eyebrow">Solicitação</p>
+                    <h2>Conte o que você precisa</h2>
+                    <p>Preencha o formulário com as informações principais. Os dados ficam salvos neste navegador para facilitar uma nova visita.</p>
+                    <div id="saved-request" class="saved-request" hidden></div>
+                </div>
+
+                <form id="request-form" class="request-form" novalidate>
+                    <div class="form-field">
+                        <label for="name">Nome completo</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required minlength="3">
+                    </div>
+                    <div class="form-field">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="request-service">Serviço desejado</label>
+                        <select id="request-service" name="service" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="Administrativo">Administrativo</option>
+                            <option value="Manutenção">Manutenção</option>
+                            <option value="Eventos">Eventos</option>
+                            <option value="Limpeza">Limpeza</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="period">Período do serviço</label>
+                        <select id="period" name="period" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="Um dia">Um dia</option>
+                            <option value="Alguns dias">Alguns dias</option>
+                            <option value="Uma semana">Uma semana</option>
+                            <option value="Mais de uma semana">Mais de uma semana</option>
+                        </select>
+                    </div>
+                    <div class="form-field full">
+                        <label for="details">Detalhes da necessidade</label>
+                        <textarea id="details" name="details" rows="5" required minlength="15" placeholder="Descreva o trabalho, local, horário e outras informações importantes."></textarea>
+                    </div>
+                    <button class="button button-primary full" type="submit">Enviar solicitação</button>
+                    <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand brand-footer" href="index.html"><img src="imagens/alocare-mark.svg" alt="" width="40" height="40"><span><strong>Alo</strong>Care</span></a>
+                <p>Locação de mão de obra com foco em conexão, clareza e confiança.</p>
+            </div>
+            <div>
+                <h2>Explore</h2>
+                <a href="index.html">Início</a>
+                <a href="profissionais.html">Profissionais</a>
+                <a href="referencias.html">Referências</a>
+            </div>
+            <div>
+                <h2>Contato</h2>
+                <p>contato@alocare.com</p>
+                <p>Segunda a sexta, 08h às 18h</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© <span id="current-year"></span> AloCare. Projeto acadêmico WDD 131.</p>
+            <p><a href="referencias.html">Referências e fontes</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o modelo de cadastro profissional da AloCare e descubra como apresentar suas habilidades.">
+    <meta name="author" content="Ana Suely Côrtes Santos">
+    <title>Profissionais | AloCare</title>
+    <link rel="icon" href="imagens/alocare-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="estilos/alocare.css">
+    <script src="scripts/alocare.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="index.html" aria-label="AloCare - página inicial">
+                <img src="imagens/alocare-mark.svg" alt="" width="44" height="44">
+                <span><strong>Alo</strong>Care<small>Locação de mão de obra</small></span>
+            </a>
+            <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+            <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a href="servicos.html">Serviços</a>
+                <a class="active" href="profissionais.html">Profissionais</a>
+                <a href="referencias.html">Referências</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Para quem oferece seu trabalho</p>
+                <h1>Mostre suas habilidades.</h1>
+                <p>AloCare organiza informações profissionais para facilitar a descoberta de talentos por clientes e empresas.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container profile-intro">
+                <div>
+                    <p class="eyebrow">Seu perfil em destaque</p>
+                    <h2>Apresente o que você sabe fazer</h2>
+                    <p>Um bom perfil deve ser claro, objetivo e verdadeiro. Informe suas principais habilidades, experiência e disponibilidade para aumentar as chances de encontrar oportunidades adequadas.</p>
+                    <a class="button button-primary" href="#cadastro">Quero me cadastrar</a>
+                </div>
+                <img src="imagens/servicos.svg" alt="Ilustração de diferentes categorias profissionais conectadas" width="600" height="440" loading="lazy">
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Boas práticas</p>
+                        <h2>O que um perfil completo apresenta</h2>
+                    </div>
+                </div>
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <span class="benefit-icon">01</span>
+                        <h3>Habilidades</h3>
+                        <p>Liste competências que realmente domina e use termos fáceis de encontrar.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <span class="benefit-icon">02</span>
+                        <h3>Experiência</h3>
+                        <p>Descreva experiências relevantes e os tipos de tarefas que você já realizou.</p>
+                    </article>
+                    <article class="benefit-card">
+                        <span class="benefit-icon">03</span>
+                        <h3>Disponibilidade</h3>
+                        <p>Informe períodos e condições de atendimento para alinhar expectativas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cadastro" class="section">
+            <div class="container form-layout">
+                <div>
+                    <p class="eyebrow">Cadastro profissional</p>
+                    <h2>Comece seu perfil</h2>
+                    <p>Este formulário demonstra a experiência de cadastro da plataforma. As informações ficam salvas somente neste navegador.</p>
+                    <div id="professional-status" class="saved-request" hidden></div>
+                </div>
+                <form id="professional-form" class="request-form">
+                    <div class="form-field">
+                        <label for="professional-name">Nome</label>
+                        <input id="professional-name" name="professional-name" type="text" autocomplete="name" required minlength="3">
+                    </div>
+                    <div class="form-field">
+                        <label for="professional-email">E-mail</label>
+                        <input id="professional-email" name="professional-email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="professional-area">Área de atuação</label>
+                        <select id="professional-area" name="professional-area" required>
+                            <option value="">Selecione uma área</option>
+                            <option value="Administrativo">Administrativo</option>
+                            <option value="Manutenção">Manutenção</option>
+                            <option value="Eventos">Eventos</option>
+                            <option value="Limpeza">Limpeza</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="professional-city">Cidade</label>
+                        <input id="professional-city" name="professional-city" type="text" autocomplete="address-level2" required>
+                    </div>
+                    <div class="form-field full">
+                        <label for="professional-skills">Principais habilidades</label>
+                        <textarea id="professional-skills" name="professional-skills" rows="4" required minlength="10"></textarea>
+                    </div>
+                    <button class="button button-primary full" type="submit">Salvar perfil neste dispositivo</button>
+                    <p id="professional-message" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand brand-footer" href="index.html"><img src="imagens/alocare-mark.svg" alt="" width="40" height="40"><span><strong>Alo</strong>Care</span></a>
+                <p>Locação de mão de obra com foco em conexão, clareza e confiança.</p>
+            </div>
+            <div>
+                <h2>Explore</h2>
+                <a href="index.html">Início</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="referencias.html">Referências</a>
+            </div>
+            <div>
+                <h2>Contato</h2>
+                <p>contato@alocare.com</p>
+                <p>Segunda a sexta, 08h às 18h</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© <span id="current-year"></span> AloCare. Projeto acadêmico WDD 131.</p>
+            <p><a href="referencias.html">Referências e fontes</a></p>
+        </div>
+    </footer>
+</body>
+</html>
