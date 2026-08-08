@@ -6,8 +6,8 @@
 - profissionais.html — cadastro profissional
 - referencias.html — fontes e referências
 - planejamentodosite.html — planejamento do site
-- styles/styles.css — CSS externo
-- scripts/main.js — JavaScript
+- estilos/alocare.css — CSS externo
+- scripts/alocare.js — JavaScript
 - imagens/ — SVGs originais e otimizados
 
 ## Requisitos demonstrados
